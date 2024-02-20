@@ -8,6 +8,33 @@ img {
   width: 100%;
 }
 
+input {
+  border: none;
+  height: 40px;
+  width: 200px;
+  border-radius: 3px;
+  margin: 10px;
+  text-align: center;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: green;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  font-size: 15px;
+  border-radius: 3px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
 .moon {
   display: none;
 }
@@ -43,8 +70,13 @@ img {
   margin: auto;
   border-radius: 30px;
 }
-.weather-card h2 span {
+.weather-card h2 {
   font-size: 60px;
+}
+.weather-card h2:after {
+  font-size: 50%;
+  vertical-align: top;
+  content: "o";
 }
 .weather-card h5 {
   font-size: 24px;
@@ -54,7 +86,7 @@ img {
   display: flex;
 }
 .weather-card .temperature {
-  width: 15%;
+  width: 20%;
 }
 .weather-card .location-date {
   width: 40%;
@@ -71,6 +103,8 @@ img {
 }
 .weather-card .location-date .image {
   width: 20px;
+  display: flex;
+  align-items: center;
 }
 .weather-card .location-date img {
   width: 100%;
@@ -129,8 +163,8 @@ img {
   border-radius: 100px;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.5);
-  top: -8px;
-  right: 200px;
+  top: -47px;
+  right: -44px;
   z-index: 2;
   filter: blur(4px);
 }
@@ -141,8 +175,8 @@ img {
   border-radius: 50px;
   position: absolute;
   background: linear-gradient(45deg, rgb(235, 129, 14) 0%, rgb(255, 255, 179) 62%);
-  top: -25px;
-  right: 185px;
+  top: -61px;
+  right: -61px;
   z-index: 3;
 }
 

@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container day" >
-        <div class="card-outer " >
+    <div id="theme" class="container" >
+        <form  id="myform">
+            <input placeholder="Enter location"  id="input" name="location" type="text">
+            <button type="submit">Submit</button>
+        </form>
+        <div class="card-outer" >
             <div class="weather-card">
-                <h5 id="condition" >cloudy</h5>
+                <h5 id="condition" ></h5>
                 <div class="card-body">
                     <div class="temperature">
-                        <h2><span id="temp" >27</span><sup>o</sup></h2>
+                        <h2 id="temp"></h2>
                     </div>
                     <div class="bar-container">
                         <div class="bar">
@@ -21,12 +25,12 @@
                         </div>
                     </div>
                     <div class="location-date">
-                        <h5><span id="day">Sunday</span>, <span id="date">12 July</span> </h5>
+                        <h5><span id="day"></span> <span id="date"></span> </h5>
                         <div class="location">
                             <div class="image">
                                 <img src="./image/location.png" alt="">
                             </div>
-                            <h5 id="place">Paris</h5>
+                            <h5 id="place"></h5>
                         </div>
                     </div>
                 </div>
@@ -66,10 +70,10 @@
                         <div class="droplet"></div>
                     </div>
                 </div>
-            </div>
-            <div class="sun-out">
-            </div>
-            <div class="sun-in">
+                <div class="sun-out">
+                </div>
+                <div class="sun-in">
+                </div>
             </div>
         </div>
         <script src="index.js"></script>
