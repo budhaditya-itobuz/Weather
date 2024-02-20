@@ -33,14 +33,14 @@ const weather = async (location) => {
             `https://api.weatherapi.com/v1/current.json?key=0c80b2b56f1943ada19100744230103&q=${location}&aqi=no`
         );
         const data = await res.json();
-        const d = new Date(data.location.localtime);
+        const date = new Date(data.location.localtime);
 
         if (data.current.precip_mm > 0) theme.classList.add("rain");
-        else if (d.getHours() > 5 && d.getHours() < 18) theme.classList.add("day");
+        else if (date.getHours() > 5 && date.getHours() < 18) theme.classList.add("day");
         else theme.classList.add("night");
 
-        day.innerText = dayArr[d.getDay()] + ",";
-        date.innerText = d.toString().substring(4, 10);
+        day.innerText = dayArr[date.getDay()] + ",";
+        date.innerText = date.toString().substring(4, 10);
         place.innerText = data.location.name;
         condition.innerText = data.current.condition.text;
         temperature.innerText = data.current.temp_c;
@@ -52,6 +52,5 @@ const weather = async (location) => {
         place.innerText = "";
         condition.innerText = "";
         temperature.innerText = "";
-        image.setAttribute("src", "");
     }
 };
