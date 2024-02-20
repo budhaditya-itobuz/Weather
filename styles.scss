@@ -69,14 +69,11 @@ form {
 
     h2 {
         font-size: 60px;
-
-        @if (content !="") {
             &:after {
                 font-size: 50%;
                 vertical-align: top;
                 content: "o";
             }
-        }
     }
 
     h5 {
